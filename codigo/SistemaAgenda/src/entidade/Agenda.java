@@ -1,9 +1,11 @@
 package entidade;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Agenda {
 	private String compromisso;
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private Date dataInicial;
 	private Date dataFinal;
 	private Integer repeticaoCompromisso;
