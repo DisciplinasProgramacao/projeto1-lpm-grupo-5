@@ -6,7 +6,7 @@ import java.util.Date;
 public class Data {
 	private Date dataInicial;
 	private Date dataFinal;
-	private Mensagem msg;
+	/* private Mensagem msg; */
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 	
@@ -30,12 +30,12 @@ public class Data {
 	public void setDataFinal(Date dataFinal) {
 		this.dataFinal = dataFinal;
 	}
-	public String validaSeDataInicalMenorQueDataDataFinal() {
+	/* public String validaSeDataInicalMenorQueDataDataFinal() {
 		if(getDataInicial().compareTo(getDataFinal())< 0) {
 			return msg.getInvalida();
 		}
 		return msg.getValida();
 	}
-	
+	 */
 	
 }

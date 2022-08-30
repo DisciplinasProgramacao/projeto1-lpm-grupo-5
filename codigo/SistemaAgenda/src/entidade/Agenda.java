@@ -1,32 +1,21 @@
 package entidade;
 
+import java.util.ArrayList;
 
 public class Agenda {
-	private Compromisso compromisso;
-	private Data data;
-
+	private ArrayList<Compromisso> compromisso;
 	
 	public Agenda() {
 	}
 
 	public Agenda(Compromisso compromisso) {
-		this.compromisso = compromisso;
-	}
-
-
-	public Data getData() {
-		return data;
-	}
-
-	public void setDete(Data data) {
-		this.data = data;
-	}
-
-	@Override
-	public String toString() {
-		return "Compromisso: "+compromisso.getNome()+
-			   " com "+compromisso.getRepeticaoCompromisso()+" repetições por semana. Do dia "+data.getDataInicial()+ " até " +data.getDataFinal();
+		this.compromisso.add(compromisso);
 	}
 	
+	public Agenda(Compromisso compromisso, int tempo, int repeticoes){
+		for(int i=1; i <= repeticoes; i++){
+			this.compromisso.add(new Compromisso(compromisso.getNome(), compromisso.getData().plusDays(tempo*i)));
+		}
+	}
 	
 }
