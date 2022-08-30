@@ -2,21 +2,25 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 import entidade.Agenda;
 import entidade.Compromisso;
+import entidade.Data;
+import entidade.Mensagem;
 
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		Scanner sc = new Scanner(System.in);
+		Agenda ag;
+		Compromisso comp;
+		Mensagem msg;
+		Data data;
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
-		List<Agenda> list = new ArrayList<>();
+
 		System.out.println("Digite a quantidade de compromissos que você deseja cadastrar");
 		int n = sc.nextInt();
 		for(int i = 1; i<=n;i++) {
@@ -29,6 +33,8 @@ public class Program {
 			System.out.println("Qual será a data inicial? Format dd/mm/yyyy");
 			Date dataInicial = sdf.parse(sc.next());
 			
+
+			sc.close();
 		}
 		
 		
