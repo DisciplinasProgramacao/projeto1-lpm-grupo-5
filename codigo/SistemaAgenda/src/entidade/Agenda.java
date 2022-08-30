@@ -2,7 +2,8 @@ package entidade;
 
 
 public class Agenda {
-	Compromisso compromisso;
+	private Compromisso compromisso;
+	private Data data;
 
 	
 	public Agenda() {
@@ -12,9 +13,19 @@ public class Agenda {
 		this.compromisso = compromisso;
 	}
 
+
+	public Data getData() {
+		return data;
+	}
+
+	public void setDete(Data data) {
+		this.data = data;
+	}
+
 	@Override
 	public String toString() {
-		return "Agenda [compromisso=" + compromisso + "]";
+		return "Compromisso: "+compromisso.getNome()+
+			   " com "+compromisso.getRepeticaoCompromisso()+" repetições por semana. Do dia "+data.getDataInicial()+ " até " +data.getDataFinal();
 	}
 	
 	
