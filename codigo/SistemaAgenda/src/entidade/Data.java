@@ -1,11 +1,11 @@
 package entidade;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Data {
-	private Date dataInicial;
-	private Date dataFinal;
+	private LocalDateTime dataInicial;
+	private LocalDateTime dataFinal;
 	/* private Mensagem msg; */
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -13,21 +13,21 @@ public class Data {
 	public Data() {
 	}
 	
-	public Data(Date dataInicial, Date dataFinal) {
+	public Data(LocalDateTime dataInicial, LocalDateTime dataFinal) {
 		super();
 		this.dataInicial = dataInicial;
 		this.dataFinal = dataFinal;
 	}
-	public Date getDataInicial() {
+	public LocalDateTime getDataInicial() {
 		return dataInicial;
 	}
-	public void setDataInicial(Date dataInicial) {
+	public void setDataInicial(LocalDateTime dataInicial) {
 		this.dataInicial = dataInicial;
 	}
-	public Date getDataFinal() {
+	public LocalDateTime getDataFinal() {
 		return dataFinal;
 	}
-	public void setDataFinal(Date dataFinal) {
+	public void setDataFinal(LocalDateTime dataFinal) {
 		this.dataFinal = dataFinal;
 	}
 	/* public String validaSeDataInicalMenorQueDataDataFinal() {

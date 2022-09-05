@@ -1,49 +1,74 @@
 package entidade;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Compromisso {
 	private String nome;
-	private Integer repeticaoCompromisso;
-	private LocalDateTime data;
-	
+	private int repeticaoCompromisso;
+	private int vezesRepeticao;
+	private LocalDate data;
+
+	private LocalDate dataFinal;
+
 	public Compromisso() {
 	}
 
-	public Compromisso(String nome, LocalDateTime data){
+	public Compromisso(String nome, LocalDate data) {
 		this.nome = nome;
 		this.data = data;
 	}
-	public Compromisso(String nome, Integer repeticaoCompromisso) {
+
+	public Compromisso(String nome, LocalDate data, int repeticaoCompromisso, int vezesRepeticao) {
 		super();
 		this.nome = nome;
-
+		this.data = data;
 		this.repeticaoCompromisso = repeticaoCompromisso;
+		this.vezesRepeticao = vezesRepeticao;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public LocalDateTime getData(){
+
+	public LocalDate getData() {
 		return data;
 	}
-	public Integer getRepeticaoCompromisso() {
+
+	public int getRepeticaoCompromisso() {
 		return repeticaoCompromisso;
 	}
-	public void setRepeticaoCompromisso(Integer repeticaoCompromisso) {
+
+	public void setRepeticaoCompromisso(int repeticaoCompromisso) {
 		this.repeticaoCompromisso = repeticaoCompromisso;
 	}
 
-	
-	
+	public int getVezesRepeticaoCompromisso() {
+		return vezesRepeticao;
+	}
+
+	public void setVezesRepeticaoCompromisso(int vezesRepeticao) {
+		this.vezesRepeticao = vezesRepeticao;
+	}
+
+
+	public LocalDate getDataFinal() {
+		return dataFinal;
+	}
+
 	@Override
+	public String toString() {
+		return "Compromisso: Ida ao " + this.getNome() +
+				" em " + this.getData() + ", e  repete a cada " + this.getRepeticaoCompromisso() + " por " + this.getVezesRepeticaoCompromisso() + " vezes.";
+	}
+	
+	/* @Override
 	public String toString() {
 		return "Compromisso: "+this.getNome()+
 			   " com "+this.getRepeticaoCompromisso()+" repetições por semana. Do dia "+data.getDataInicial()+ " até " +data.getDataFinal();
-	}
-
+	} */
 }
-
-	
