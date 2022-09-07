@@ -11,14 +11,16 @@ public class Compromisso {
 
 	private LocalDate dataFinal;
 
+	// Um Construtor.
 	public Compromisso() {
 	}
-
+	// Um Construtor.
 	public Compromisso(String nome, LocalDate data) {
 		this.nome = nome;
 		this.data = data;
 	}
 
+	// Um Construtor.
 	public Compromisso(String nome, LocalDate data, int repeticaoCompromisso, int vezesRepeticao) {
 		super();
 		this.nome = nome;
@@ -27,6 +29,7 @@ public class Compromisso {
 		this.vezesRepeticao = vezesRepeticao;
 	}
 
+	// Os getters e setters.
 	public String getNome() {
 		return nome;
 	}
@@ -60,6 +63,12 @@ public class Compromisso {
 		return dataFinal;
 	}
 
+	/**
+	 * A função retorna uma string que contém o nome do evento, a data do evento, o
+	 * repetição do evento e o número de vezes que o evento é repetido
+	 * 
+	 * @return O método toString está sendo retornado.
+	 */
 	@Override
 	public String toString() {
 		return "Compromisso: Ida ao " + this.getNome() +

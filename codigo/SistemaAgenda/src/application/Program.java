@@ -1,12 +1,9 @@
 package application;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,6 +24,12 @@ public class Program {
 		System.out.println("0 - Sair e salvar");
 	}
 
+	/**
+	 * Recebe um inteiro e retorna um objeto Month
+	 * 
+	 * @param mesCompromisso o mês do compromisso
+	 * @return O método está retornando um objeto Month.
+	 */
 	public static Month lerMes(int mesCompromisso) {
 
 		switch (mesCompromisso) {
