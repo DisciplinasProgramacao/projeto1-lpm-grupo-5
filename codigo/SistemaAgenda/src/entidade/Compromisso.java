@@ -69,15 +69,9 @@ public class Compromisso {
 	 * 
 	 * @return O método toString está sendo retornado.
 	 */
-	@Override
-	public String toString() {
+	public String relatorioCompromisso() {
 		return "Compromisso: Ida ao " + this.getNome() +
 				" em " + this.getData() + ", e  repete a cada " + this.getRepeticaoCompromisso() + " por " + this.getVezesRepeticaoCompromisso() + " vezes.";
 	}
 	
-	/* @Override
-	public String toString() {
-		return "Compromisso: "+this.getNome()+
-			   " com "+this.getRepeticaoCompromisso()+" repetições por semana. Do dia "+data.getDataInicial()+ " até " +data.getDataFinal();
-	} */
 }
