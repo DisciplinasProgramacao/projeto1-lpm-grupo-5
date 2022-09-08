@@ -1,6 +1,8 @@
 package application;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
@@ -12,6 +14,27 @@ import entidade.Compromisso;
 
 public class Program {
 
+	public static void main1(String[] args) throws ParseException {
+		Scanner sc = new Scanner(System.in);
+		Agenda ag;
+		Compromisso comp;
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+
+		System.out.println("Digite a quantidade de compromissos que você deseja cadastrar");
+		int n = sc.nextInt();
+		for(int i = 1; i<=n;i++) {
+			System.out.println("Compromisso: "+ i);
+			System.out.println("Qual será o compromisso?");
+			sc.next();
+			String nome = sc.nextLine();
+			System.out.println("Quantas vezes o compromisso irá se repetir por semana?");
+			Integer repeticaoCompromisso = sc.nextInt();
+			System.out.println("Qual será a data inicial? Format dd/mm/yyyy");
+			Date dataInicial = sdf.parse(sc.next());
+			}
+		}
 	public static void limparTela() {
 		System.out.flush();
 	}
@@ -126,25 +149,3 @@ public class Program {
 	}
 
 }
-
-/*
- * Scanner sc = new Scanner(System.in);
- * SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
- * 
- * 
- * System.out.
- * println("Digite a quantidade de compromissos que você deseja cadastrar");
- * int n = sc.nextInt();
- * 
- * for (int i = 1; i <= n; i++) {
- * System.out.println("Compromisso: " + i);
- * System.out.println("Qual será o compromisso?");
- * sc.next();
- * String nome = sc.nextLine();
- * System.out.println("Quantas vezes o compromisso irá se repetir por semana?");
- * Integer repeticaoCompromisso = sc.nextInt();
- * System.out.println("Qual será a data inicial? Format dd/mm/yyyy");
- * Date dataInicial = sdf.parse(sc.next());
- * 
- * }
- */
